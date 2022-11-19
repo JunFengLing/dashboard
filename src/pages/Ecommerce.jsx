@@ -108,24 +108,31 @@ const Ecommerce = () => {
               </div>
               <div className="mt-8">
                 <p className="text-3xl font-semibold">$48,487</p>
-
                 <p className="text-gray-500 mt-1">Expense</p>
               </div>
 
               <div className="mt-5">
-                <SparkLine currentColor={currentColor} id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
+                <SparkLine
+                  currentColor={ currentColor }
+                  id="line-sparkLine"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={ SparklineAreaData }
+                  color={ currentColor }
+                />
               </div>
               <div className="mt-10">
                 <Button
                   color="white"
-                  bgColor={currentColor}
+                  bgColor={ currentColor }
                   text="Download Report"
                   borderRadius="10px"
                 />
               </div>
             </div>
             <div>
-              <Stacked currentMode={currentMode} width="320px" height="360px" />
+              <Stacked currentMode={ currentMode } width="320px" height="360px" />
             </div>
           </div>
         </div>
@@ -166,11 +173,11 @@ const Ecommerce = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
           <div className="flex justify-between items-center gap-2">
             <p className="text-xl font-semibold">Recent Transactions</p>
-            <DropDown currentMode={currentMode} />
+            <DropDown currentMode={ currentMode } />
           </div>
           <div className="mt-10 w-72 md:w-400">
-            {recentTransactions.map((item) => (
-              <div key={item.title} className="flex justify-between mt-4">
+            { recentTransactions.map((item) => (
+              <div key={ item.title } className="flex justify-between mt-4">
                 <div className="flex gap-4">
                   <button
                     type="button"
@@ -180,22 +187,22 @@ const Ecommerce = () => {
                     }}
                     className="text-2xl rounded-lg p-4 hover:drop-shadow-xl"
                   >
-                    {item.icon}
+                    { item.icon }
                   </button>
                   <div>
-                    <p className="text-md font-semibold">{item.title}</p>
-                    <p className="text-sm text-gray-400">{item.desc}</p>
+                    <p className="text-md font-semibold">{ item.title }</p>
+                    <p className="text-sm text-gray-400">{ item.desc }</p>
                   </div>
                 </div>
-                <p className={`text-${item.pcColor}`}>{item.amount}</p>
+                <p className={ `text-${ item.pcColor }` }>{ item.amount }</p>
               </div>
-            ))}
+            )) }
           </div>
           <div className="flex justify-between items-center mt-5 border-t-1 border-color">
             <div className="mt-3">
               <Button
                 color="white"
-                bgColor={currentColor}
+                bgColor={ currentColor }
                 text="Add"
                 borderRadius="10px"
               />
@@ -225,8 +232,8 @@ const Ecommerce = () => {
           </div>
 
           <div className="mt-10 ">
-            {weeklyStats.map((item) => (
-              <div key={item.title} className="flex justify-between mt-4 w-full">
+            { weeklyStats.map((item) => (
+              <div key={ item.title } className="flex justify-between mt-4 w-full">
                 <div className="flex gap-4">
                   <button
                     type="button"
